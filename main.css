@@ -1,28 +1,40 @@
-* {
-	margin: 0;
-	padding: 0;
-	font-family: sans-serif;
+#app {
+	display: flex;
+	align-items: center;
+	font-family: 'Black Han Sans', sans-serif;
+	padding: 5vh 5vw;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
-#main-image-wrap {
-	background-image: url('quote-1.png');
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
-	width: 100%;
-	height: 100vh;
+#quote-wrap {
+	font-size: 10vmin;
+	text-align: center;
+	margin: auto;
 }
-#feedback {
-	background-color: #EEE;
-	opacity: 0.8;
-	color: black;
+#quote {
+	background-color: white;
+}
+#corner-wrap {
 	position: absolute;
 	right: 20px;
 	bottom: 20px;
-	padding: 5px;
-	font-size: 200%;
-	text-decoration: none;
-	border-radius: 2px;
 }
-body {
-	background-color: black;
+.button {
+	background-color: white;
+	color: black;
+	padding: 1vmin;
+	margin: 1vmin;
+	font-size: 3vmin;
+	text-decoration: none;
+	transition: box-shadow .5s,transform .5s;
+	display: inline-block;
+	cursor: pointer;
+}
+.button:hover {
+	box-shadow: 1vmin 1vmin black;
+	transform: scale(1.1);
 }
