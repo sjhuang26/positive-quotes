@@ -20,8 +20,8 @@
 }
 #corner-wrap {
 	position: absolute;
-	right: 20px;
-	bottom: 20px;
+	right: 5vmin;
+	bottom: 5vmin;
 }
 .button {
 	background-color: white;
