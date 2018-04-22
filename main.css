@@ -38,3 +38,8 @@
 	box-shadow: 1vmin 1vmin black;
 	transform: scale(1.1);
 }
+@media print {
+	#corner-wrap {
+		display: none;
+	}
+}
