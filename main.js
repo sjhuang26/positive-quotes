@@ -23,5 +23,5 @@ document.getElementById("new-quote").addEventListener("click", function(){
   makeQuote();
 });
 document.getElementById("credits").addEventListener("click", function(){
-  document.getElementById("quote").textContent = "Made by Suhao Jeffrey Huang. Quotes from various online sources.";
+  document.getElementById("quote").textContent = "Made by Jeffrey Huang for the Class Office of 2021. Quotes from various online sources.";
 });
