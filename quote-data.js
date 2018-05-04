@@ -34,4 +34,8 @@ If you can’t stop thinking about it, don’t stop working for it.
 Whether you think you can or you think you can’t, you’re right.
 Perfection is not attainable, but if we chase perfection we can catch excellence.
 Life is 10% what happens to me and 90% of how I react to it.
+Proceed in life as if you're going to succeed.
+If your heart is broken, make art with the pieces.
+I know nothing, but I am here to learn.
+If you can't see anything beautiful about yourself, get a better mirror, look a little closer, stare a little longer.
 `;
