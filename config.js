@@ -9,10 +9,10 @@ var MODE="poster";
   Don't put quotes outside of the tick marks (` `).
 */
 var RAW_QUOTE_STRING = `
-Those who matter don’t mind, and those that mind don’t matter.
+Those who matter don't mind, and those that mind don't matter.
 Be the energy you want to attract.
 Difficult roads lead to beautiful destinations.
-When you can’t find the sunshine, be the sunshine.
+When you can't find the sunshine, be the sunshine.
 Life is a series of a thousand tiny miracles. Notice and cherish them.
 A winner is just a loser that tried one more time.
 Wake up each morning with the thought that something wonderful is about to happen.
@@ -30,13 +30,13 @@ Sometimes when things are falling apart, they may actually be falling into place
 When life takes away, something of greater value is always given in return.
 The one who falls and gets up is so much stronger than the one who never fell.
 We may encounter many defeats but we must not be defeated.
-Believe you can and you’re halfway there.
+Believe you can and you're halfway there.
 Yesterday is not ours to recover, but tomorrow is ours to win or lose.
 Turn your face to the sun and the shadow falls behind you.
 The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.
-Practice like you’ve never won; perform like you’ve never lost.
-If you can’t stop thinking about it, don’t stop working for it.
-Whether you think you can or you think you can’t, you’re right.
+Practice like you've never won; perform like you've never lost.
+If you can't stop thinking about it, don't stop working for it.
+Whether you think you can or you think you can't, you're right.
 Perfection is not attainable, but if we chase perfection we can catch excellence.
 Life is 10% what happens to me and 90% of how I react to it.
 Proceed in life as if you're going to succeed.
