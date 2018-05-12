@@ -72,4 +72,6 @@ $("new-quote").addEventListener("click", function(){
   makeQuote();
 });
 
+$("search-input").focus();
+
 mode.init();

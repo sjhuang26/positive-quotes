@@ -1,5 +1,5 @@
 #app {
-	font-family: 'Black Han Sans', sans-serif;
+	font-family: 'Share', sans-serif;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -22,6 +22,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	background-color: #002b36;
 }
 .main-text {
 	background-color: white;
@@ -71,13 +72,13 @@
 	color: purple;
 }
 .button-icon {
-	width: 5vmin;
+	height: 5vmin;
 }
 .text-input {
 	margin: 0;
-	font-family: 'Black Han Sans', sans-serif;
+	font-family: 'Share', sans-serif;
 	padding: 0;
-	font-size: 5vmin;
+	font-size: 3vmin;
 	border: none;
 	outline: none;
 	display:inline-block;
@@ -85,11 +86,13 @@
 	white-space:normal;
 	background:none;
 	line-height:1;
-	width: 50vmin;
+	width: 30vmin;
+	height: 5vmin;
 }
 #search-form {
 	margin: 0;
 	padding: 0;
+	display: flex;
 }
 @media print {
 	#corner-wrap {
