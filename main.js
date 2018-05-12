@@ -46,7 +46,7 @@ var colorizeBackground = function() {
   if(ENABLE_GOOGLE_EARTH) {
     if(!window.googleEarthLoaded) {
       window.googleEarthLoaded = true;
-      var n = rand(0, 20) * 4;
+      var n = rand(0, 19) * 4;
       $("normal-section").style.backgroundImage="url('https://www.gstatic.com/prettyearth/assets/full/" + googleEarth[rand(0,googleEarth.length - 1)].substring(n, n+4) + ".jpg')";
     }
   } else {
