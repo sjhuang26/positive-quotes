@@ -1,27 +1,46 @@
 #app {
-	display: flex;
-	align-items: center;
 	font-family: 'Black Han Sans', sans-serif;
-	padding: 5vh 5vw;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	padding:0;
+	margin:0;
 }
-#quote-wrap {
-	font-size: 10vmin;
-	text-align: center;
-	margin: auto;
+.app-section {
+	display: flex;
+	align-items: center;
+	padding: 5vh 5vw;
+	padding:0;
+	margin:0;
+	width: 100%;
+	height: 100vh;
 }
-#quote {
+#poster-section {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.main-text {
 	background-color: white;
 }
 #corner-wrap {
 	position: absolute;
 	right: 5vmin;
 	bottom: 5vmin;
+}
+.main-text-wrap {
+	font-size: 10vmin;
+	text-align: center;
+	margin: auto;
+}
+.text-2 {
+	font-size: 80%;
+}
+.text-3 {
+	font-size: 50%;
 }
 .button {
 	background-color: white;
@@ -37,6 +56,9 @@
 .button:hover {
 	box-shadow: 1vmin 1vmin black;
 	transform: scale(1.1);
+}
+#poster-section .main-text {
+	color: purple;
 }
 @media print {
 	#corner-wrap {

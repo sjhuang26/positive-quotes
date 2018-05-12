@@ -1,5 +1,13 @@
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106921406-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-106921406-2');
+    </script>
     <title>Positive Quotes</title>
     <!-- favicon stuff generated at https://realfavicongenerator.net -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -13,14 +21,29 @@
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <body id="app">
-    <p id="quote-wrap"><mark id="quote">“When you can’t find the sunshine, be the sunshine.” Unknown</mark></p>
-    <div id="corner-wrap">
-      <a id="credits" class="button">Credits</a>
-      <a id="new-quote" class="button">New quote</a>
-      <a id="search" class="button" target="_blank">Search</a>
-      <a id="feedback" class="button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd_HChDTrjjjRp6OYYmkEGLJs47V4Vvvg4Vl6qsf9FgXGI1vg/viewform">Feedback</a>
+    <div id="normal-section" class="app-section">
+      <p id='quote-wrap' class='main-text-wrap'>
+        <mark id='quote' class='main-text'>
+          Loading ... loading ... loading ... loading ... loading ...
+        </mark>
+      </p>
     </div>
-    <script src="quote-data.js"></script>
+    <div id="poster-section" class="app-section">
+      <p class='main-text-wrap'>
+        <mark class='main-text'>
+          Ice Cream Sale!<br />
+          <span class="text-2">May 18th in Crossroads</span><br />
+          <span class="text-3">(all lunch mods)</span><br />
+          <span class="text-2">$1.50 per cup</span><br />
+        </mark>
+      </p>
+    </div>
+    <div id='corner-wrap'>
+      <a class='button' id='credits'>Credits</a>
+      <a class='button' id='new-quote'>New quote</a>
+      <a class='button' href='https://docs.google.com/forms/d/e/1FAIpQLSd_HChDTrjjjRp6OYYmkEGLJs47V4Vvvg4Vl6qsf9FgXGI1vg/viewform' id='feedback' target='_blank'>Feedback</a>
+    </div>
+    <script src="config.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
