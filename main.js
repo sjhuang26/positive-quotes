@@ -44,3 +44,6 @@ if(MODE==="poster"){
   togglePoster(true);
   $("poster-section").style.backgroundImage="url('https://hips.hearstapps.com/del.h-cdn.co/assets/17/23/1497238977-delish-mason-jar-ice-cream-3.jpg')";
 }
+document.getElementById("credits").addEventListener("click", function(){
+  document.getElementById("quote").textContent = "Made by Jeffrey Huang for the Class Office of 2021. Quotes from various online sources.";
+});
