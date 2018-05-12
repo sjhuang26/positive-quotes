@@ -21,6 +21,14 @@ for(var i=0;i<unfiltered.length;++i){
   if(unfiltered[i].length != 0)quotes.push(unfiltered[i]);
 }
 
+unfiltered=RAW_GOOGLE_EARTH_STRING.split(/\n/);
+var googleEarth=[];
+for(var i=0;i<unfiltered.length;++i){
+  unfiltered[i]=unfiltered[i].trim();
+  // This will trim the last row of data, but whatever.
+  if(unfiltered[i].length == 80)googleEarth.push(unfiltered[i]);
+}
+
 var mode = new Property(MODE, v => {
   $("normal-section").style.display = (v == "normal") ? "flex" : "none";
   $("poster-section").style.display = (v == "poster") ? "flex" : "none";
@@ -29,16 +37,23 @@ var mode = new Property(MODE, v => {
     makeQuote();
   }
   
-  /* FOR POSTER MODE */
   if(v === "poster"){
     $("poster-section").style.backgroundImage="url('https://hips.hearstapps.com/del.h-cdn.co/assets/17/23/1497238977-delish-mason-jar-ice-cream-3.jpg')";
   }
 });
 
 var colorizeBackground = function() {
-  var color1 = rand(0,359);
-  var color2 = color1 + rand(40,120);
-  $("normal-section").style.background="linear-gradient(90deg, "+makeHSL(color1)+" 0%,"+makeHSL(color2)+" 100%)";
+  if(ENABLE_GOOGLE_EARTH) {
+    if(!window.googleEarthLoaded) {
+      window.googleEarthLoaded = true;
+      var n = rand(0, 20) * 4;
+      $("normal-section").style.backgroundImage="url('https://www.gstatic.com/prettyearth/assets/full/" + googleEarth[rand(0,googleEarth.length - 1)].substring(n, n+4) + ".jpg')";
+    }
+  } else {
+    var color1 = rand(0,359);
+    var color2 = color1 + rand(40,120);
+    $("normal-section").style.background="linear-gradient(90deg, "+makeHSL(color1)+" 0%,"+makeHSL(color2)+" 100%)";
+  }
 }
 
 var makeQuote = function(){

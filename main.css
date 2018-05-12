@@ -18,7 +18,7 @@
 	width: 100%;
 	height: 100vh;
 }
-#poster-section {
+#poster-section, #normal-section {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -30,6 +30,16 @@
 	position: absolute;
 	right: 5vmin;
 	bottom: 5vmin;
+}
+#upper-right-wrap {
+	position: absolute;
+	right: 5vmin;
+	top: 5vmin;
+}
+#upper-left-wrap {
+	position: absolute;
+	left: 5vmin;
+	top: 5vmin;
 }
 .main-text-wrap {
 	font-size: 10vmin;
@@ -59,6 +69,27 @@
 }
 #poster-section .main-text {
 	color: purple;
+}
+.button-icon {
+	width: 5vmin;
+}
+.text-input {
+	margin: 0;
+	font-family: 'Black Han Sans', sans-serif;
+	padding: 0;
+	font-size: 5vmin;
+	border: none;
+	outline: none;
+	display:inline-block;
+	vertical-align:middle;
+	white-space:normal;
+	background:none;
+	line-height:1;
+	width: 50vmin;
+}
+#search-form {
+	margin: 0;
+	padding: 0;
 }
 @media print {
 	#corner-wrap {
