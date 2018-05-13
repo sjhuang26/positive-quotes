@@ -47,7 +47,8 @@ var colorizeBackground = function() {
     if(!window.googleEarthLoaded) {
       window.googleEarthLoaded = true;
       var n = rand(0, 19) * 4;
-      $("normal-section").style.backgroundImage="url('https://www.gstatic.com/prettyearth/assets/preview/" + googleEarth[rand(0,googleEarth.length - 1)].substring(n, n+4) + ".jpg')";
+      var id = googleEarth[rand(0,googleEarth.length - 1)].substring(n, n+4);
+      $("normal-section").style.backgroundImage="url('https://www.gstatic.com/prettyearth/assets/full/" + id + ".jpg'),url('https://www.gstatic.com/prettyearth/assets/preview/" + id + ".jpg')";
     }
   } else {
     var color1 = rand(0,359);
