@@ -28,6 +28,10 @@
 }
 .main-text {
 	background-color: white;
+	color: black;
+}
+.purple-text {
+	color: purple;
 }
 #corner-wrap {
 	position: absolute;
@@ -49,11 +53,17 @@
 	text-align: center;
 	margin: auto;
 }
+.text-1 {
+	font-size: 150%;
+}
 .text-2 {
 	font-size: 80%;
 }
 .text-3 {
 	font-size: 50%;
+}
+.text-4 {
+	font-size: 25%;
 }
 .button {
 	background-color: rgba(255,255,255,.8);
@@ -72,9 +82,6 @@
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 	background-color: white;
 	border-radius: 4px;
-}
-#poster-section .main-text {
-	color: purple;
 }
 .button-icon {
 	height: 5vmin;
@@ -114,4 +121,27 @@
 	background-color: rgba(255,255,255,.8);
 	border-radius: 20px;
 	padding: 5px;
+}
+
+/* https://codepen.io/P1N2O/pen/pyBNzX */
+
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.gradient-bg {
+	background: linear-gradient(-45deg, #EE7752, #E73C7E) !important;
+	background-size: 400% 400% !important;
+	-webkit-animation: Gradient 3s ease infinite !important;
+	-moz-animation: Gradient 3s ease infinite !important;
+	animation: Gradient 3s ease infinite !important;
 }

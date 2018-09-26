@@ -38,7 +38,7 @@ var mode = new Property(MODE, v => {
   }
   
   if(v === "poster"){
-    $("poster-section").style.backgroundImage="url('https://hips.hearstapps.com/del.h-cdn.co/assets/17/23/1497238977-delish-mason-jar-ice-cream-3.jpg')";
+    //$("poster-section").style.backgroundImage="url('https://hips.hearstapps.com/del.h-cdn.co/assets/17/23/1497238977-delish-mason-jar-ice-cream-3.jpg')";
   }
 });
 
