@@ -1,7 +1,7 @@
 /*
   A switch for the mode of the webpage.
 */
-var MODE="poster";
+var MODE="normal";
 
 /*
   A switch for if Google Earth images are enabled.
