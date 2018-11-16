@@ -31,14 +31,19 @@ for(var i=0;i<unfiltered.length;++i){
 
 var mode = new Property(MODE, v => {
   $("normal-section").style.display = (v == "normal") ? "flex" : "none";
-  $("poster-section").style.display = (v == "poster") ? "flex" : "none";
+  $("ice-cream-section").style.display = (v == "ice-cream") ? "flex" : "none";
+  $("bake-sale-section").style.display = (v == "bake-sale") ? "flex" : "none";
 
   if(v === "normal"){
     makeQuote();
   }
   
-  if(v === "poster"){
-    //$("poster-section").style.backgroundImage="url('https://hips.hearstapps.com/del.h-cdn.co/assets/17/23/1497238977-delish-mason-jar-ice-cream-3.jpg')";
+  if(v === "ice-cream"){
+    $("ice-cream-section").style.backgroundImage="url('https://hips.hearstapps.com/del.h-cdn.co/assets/17/23/1497238977-delish-mason-jar-ice-cream-3.jpg')";
+  }
+
+  if(v === "bake-sale"){
+    $("bake-sale-section").style.backgroundImage="url('https://media.wired.com/photos/5926a8adcfe0d93c47430fa3/master/pass/Pumpkins-452399143-1.jpg')";
   }
 });
 
