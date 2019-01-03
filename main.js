@@ -33,6 +33,7 @@ var mode = new Property(MODE, v => {
   $("normal-section").style.display = (v == "normal") ? "flex" : "none";
   $("ice-cream-section").style.display = (v == "ice-cream") ? "flex" : "none";
   $("bake-sale-section").style.display = (v == "bake-sale") ? "flex" : "none";
+  $("hat-sale-section").style.display = (v == "hat") ? "flex" : "none";
 
   if(v === "normal"){
     makeQuote();
@@ -44,6 +45,10 @@ var mode = new Property(MODE, v => {
 
   if(v === "bake-sale"){
     $("bake-sale-section").style.backgroundImage="url('https://media.wired.com/photos/5926a8adcfe0d93c47430fa3/master/pass/Pumpkins-452399143-1.jpg')";
+  }
+  
+  if(v === "hat"){
+    $("hat-sale-section").style.background="black";
   }
 });
 
