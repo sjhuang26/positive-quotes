@@ -122,6 +122,10 @@
 	display: flex;
 	align-items: center;
 }
+.search-results-wrap {
+	position: absolute;
+	z-index: 999;
+}
 .search-results--item {
 	font-size: 80%;
 	margin: 5vmin;
@@ -140,6 +144,9 @@
 	background-color: rgba(255,255,255,.8);
 	border-radius: 20px;
 	padding: 5px;
+}
+.panel-solid {
+	background-color: white;
 }
 .button-bar {
 	display: flex;

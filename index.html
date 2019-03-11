@@ -23,13 +23,15 @@
   <body id="app">
     <div id="normal-section" class="app-section">
       <div class="panel">
-        <form class="search" id="google-search" action="https://google.com/search">
-          <a href="https://google.com">
-            <img class="button-icon" src="images/google.png" style="margin: 0 1vmin 0 0" />
-          </a>
+        <form class="search" id="teacher-search" class="search">
+          <span style="margin: 0 1vmin 0 0">Search teachers...</span>
           <input name="q" class="search--input text-input" placeholder="..." autocomplete="off" type="text">
           <input class="search--submit button button-icon" type="image" name="submit" src="images/search.png" border="0" alt="Submit" />
         </form>
+        <div class="search-results-wrap panel panel-solid">
+          <div class="search-results" id="teacher-search-results">
+          </div>
+        </div>
       </div>
       <p class="main-text-wrap">
         <mark id="quote" class="text-3 main-text italic-text no-background-text translucent-text">
@@ -65,15 +67,13 @@
       <a class="button" id="new-quote">New quote</a>
     </div>
     <div id="upper-left-wrap" class="panel">
-      <form class="search" id="teacher-search" class="search">
-        <span style="margin: 0 1vmin 0 0">Search teachers...</span>
+      <form class="search" id="google-search" action="https://google.com/search">
+        <a href="https://google.com">
+          <img class="button-icon" src="images/google.png" style="margin: 0 1vmin 0 0" />
+        </a>
         <input name="q" class="search--input text-input" placeholder="..." autocomplete="off" type="text">
         <input class="search--submit button button-icon" type="image" name="submit" src="images/search.png" border="0" alt="Submit" />
       </form>
-      <div class="search-results-wrap">
-        <div class="search-results" id="teacher-search-results">
-        </div>
-      </div>
     </div>
     <div id="upper-right-wrap" class="panel button-bar">
       <a class="button button--flat" href="https://powerschool3.niskyschools.org">
