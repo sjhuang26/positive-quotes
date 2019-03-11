@@ -62,7 +62,10 @@ var mode = new Property(MODE, v => {
       var results = fuse.search(term).splice(0, 5);
       
       for (var result of results) {
-        $r.appendChild($str(`<div class="search-results--item"><span>${result.text}</span><span> (${result.department ? result.department : 'No department'})</span></div>`));
+        $r.appendChild($str(`<div class="search-results-item"><span>${result.text}</span><span class="search-results-item-secondary"> ${result.department ? result.department : 'No department'}</span></div>`));
+      }
+      if (results.length === 0) {
+        $r.appendChild($str(`<div class="search-results-item">No results</div>`));
       }
     }
   });
@@ -109,11 +112,15 @@ var makeQuote = function(){
 };
 
 var configureSearchComponent = function($e, handler){
-  $e.querySelector(".search--input").addEventListener("input", function(ev){
-    if (handler) {
+  if (handler) {
+    $e.querySelector(".search--input").addEventListener("input", function(ev){
       handler($e.querySelector(".search--input").value);
-    }
-  });
+    });
+    $e.addEventListener("submit", function(ev){
+      handler($e.querySelector(".search--input").value);
+      ev.preventDefault();
+    });
+  }
 };
 
 $("credits").addEventListener("click", function(){
