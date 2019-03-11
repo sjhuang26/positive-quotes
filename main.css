@@ -14,11 +14,12 @@
 .app-section {
 	display: flex;
 	align-items: center;
-	padding: 5vh 5vw;
-	padding:0;
-	margin:0;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
 	width: 100%;
 	height: 100vh;
+	flex-flow: column;
 }
 #poster-section, #normal-section {
 	background-repeat: no-repeat;
@@ -30,8 +31,17 @@
 	background-color: white;
 	color: black;
 }
+.no-background-text {
+	background: transparent;
+}
 .purple-text {
 	color: purple;
+}
+.italic-text {
+	font-style: italic;
+}
+.translucent-text {
+	opacity: 0.8;
 }
 #corner-wrap {
 	position: absolute;
@@ -51,7 +61,7 @@
 .main-text-wrap {
 	font-size: 10vmin;
 	text-align: center;
-	margin: auto;
+	margin: 10vmin;
 }
 .text-1 {
 	font-size: 150%;
@@ -96,6 +106,7 @@
 	padding: 0;
 	font-size: 3vmin;
 	border: none;
+	border-bottom: 2px solid #777;
 	outline: none;
 	display:inline-block;
 	vertical-align:middle;
@@ -105,7 +116,7 @@
 	width: 30vmin;
 	height: 5vmin;
 }
-#search-form {
+.search {
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -121,6 +132,10 @@
 	background-color: rgba(255,255,255,.8);
 	border-radius: 20px;
 	padding: 5px;
+}
+.button-bar {
+	display: flex;
+	align-items: center;
 }
 
 /* https://codepen.io/P1N2O/pen/pyBNzX */

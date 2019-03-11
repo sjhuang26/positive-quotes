@@ -9,8 +9,14 @@ var rand = function(low, high) {
 };
 
 var makeHSL = function(color){
-  return "hsl("+color+","+rand(60,100)+"%,"+rand(30,70)+"%)";
+  return "hsl("+color+","+rand(60,100)+"%,"+rand(95,100)+"%)";
 };
+
+var $str = function(str) {
+  var x = document.createElement('div');
+  x.innerHTML = str;
+  return x.firstChild;
+}
 
 // PROCESS CONFIG DATA
 
@@ -29,7 +35,37 @@ for(var i=0;i<unfiltered.length;++i){
   if(unfiltered[i].length == 80)googleEarth.push(unfiltered[i]);
 }
 
+var fuse = (() => {
+  var options = {
+    shouldSort: true,
+    threshold: 0.6,
+    location: 0,
+    distance: 100,
+    maxPatternLength: 32,
+    minMatchCharLength: 1,
+    keys: [
+      "department",
+      "text"
+    ]
+  };
+  return new Fuse(TEACHER_WEBPAGE_LIST, options);
+})();
 var mode = new Property(MODE, v => {
+  configureSearchComponent($("google-search"));
+  configureSearchComponent($("teacher-search"), (rawTerm) => {
+    var term = rawTerm.trim();
+    var $r = $("teacher-search-results");
+    while ($r.firstChild) {
+      $r.removeChild($r.firstChild);
+    }
+    if (term !== "") { // blanks don't count
+      var results = fuse.search(term).splice(0, 5);
+      
+      for (var result of results) {
+        $r.appendChild($str(`<div class="search-results--item"><span>${result.text}</span><span> (${result.department ? result.department : 'No department'})</span></div>`));
+      }
+    }
+  });
   $("normal-section").style.display = (v == "normal") ? "flex" : "none";
   $("ice-cream-section").style.display = (v == "ice-cream") ? "flex" : "none";
   $("bake-sale-section").style.display = (v == "bake-sale") ? "flex" : "none";
@@ -72,6 +108,14 @@ var makeQuote = function(){
   $("quote").textContent = quotes[rand(0,quotes.length - 1)];
 };
 
+var configureSearchComponent = function($e, handler){
+  $e.querySelector(".search--input").addEventListener("input", function(ev){
+    if (handler) {
+      handler($e.querySelector(".search--input").value);
+    }
+  });
+};
+
 $("credits").addEventListener("click", function(){
   mode.setValue("normal");
   colorizeBackground();
@@ -82,7 +126,5 @@ $("new-quote").addEventListener("click", function(){
   mode.setValue("normal");
   makeQuote();
 });
-
-$("search-input").focus();
 
 mode.init();
