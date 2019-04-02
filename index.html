@@ -8,7 +8,7 @@
       gtag('js', new Date());
       gtag('config', 'UA-106921406-2');
     </script>
-    <title>NEW FEATURES COMING SOON</title>
+    <title>POSITIVE QUOTES</title>
     <!-- favicon stuff generated at https://realfavicongenerator.net -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -19,17 +19,40 @@
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Share:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <body id="app">
     <div id="normal-section" class="app-section">
+      <div class="panel carousel-panel">
+        <div class="carousel">
+          <img class="carousel-cell" data-flickity-lazyload="photos/1.jpg">
+          <img class="carousel-cell" data-flickity-lazyload="photos/2.jpg">
+          <img class="carousel-cell" data-flickity-lazyload="photos/3.jpg">
+          <img class="carousel-cell" data-flickity-lazyload="photos/4.jpg">
+          <img class="carousel-cell" data-flickity-lazyload="photos/5.jpg">
+          <img class="carousel-cell" data-flickity-lazyload="photos/6.jpg">
+          <img class="carousel-cell" data-flickity-lazyload="photos/7.jpg">
+          <img class="carousel-cell" data-flickity-lazyload="photos/8.jpg">
+          <img class="carousel-cell" data-flickity-lazyload="photos/9.jpg">
+          <img class="carousel-cell" data-flickity-lazyload="photos/10.jpg">
+          <img class="carousel-cell" data-flickity-lazyload="photos/11.jpg">
+          <img class="carousel-cell" data-flickity-lazyload="photos/12.jpg">
+          <img class="carousel-cell" data-flickity-lazyload="photos/13.jpg">
+          <img class="carousel-cell" data-flickity-lazyload="photos/14.jpg">
+          <img class="carousel-cell" data-flickity-lazyload="photos/15.jpg">
+          <img class="carousel-cell" data-flickity-lazyload="photos/16.jpg">
+          <img class="carousel-cell" data-flickity-lazyload="photos/17.jpg">
+          <img class="carousel-cell" data-flickity-lazyload="photos/18.jpg">
+        </div>
+      </div>
       <div class="panel">
         <form class="search" id="teacher-search" class="search">
           <span style="margin: 0 1vmin 0 0">Search teachers...</span>
           <input name="q" class="search--input text-input" placeholder="..." autocomplete="off" type="text">
           <input class="search--submit button button-icon" type="image" name="submit" src="images/search.png" border="0" alt="Submit" />
         </form>
-        <div class="search-results-wrap panel panel-solid">
+        <div class="search-results-wrap panel panel-solid" id="teacher-search-results-wrap">
           <div class="search-results" id="teacher-search-results">
           </div>
         </div>
@@ -90,6 +113,7 @@
         <span>Library</span>
       </a>
     </div>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse-js-latest@3.1.0/dist/fuse.min.js"></script>
     <script src="attr.js"></script>
     <script src="config.js"></script>

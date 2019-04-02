@@ -176,3 +176,15 @@
 	-moz-animation: Gradient 3s ease infinite !important;
 	animation: Gradient 3s ease infinite !important;
 }
+
+.carousel {
+	width: 500px;
+}
+.carousel-cell {
+	height: 150px;
+}
+.carousel-panel {
+	overflow: hidden;
+	padding: 0;
+	margin: 10vmin;
+}
