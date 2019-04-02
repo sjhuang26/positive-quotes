@@ -3,23 +3,23 @@
  */
 
 var Property = class {
-  constructor(value, enterListener, exitListener) {
-    this.value = value;
-    this.enterListener = enterListener === undefined ? function(value) {} : enterListener;
-    this.exitListener = exitListener === undefined ? function(value) {} : exitListener;
-  }
+	constructor(value, enterListener, exitListener) {
+		this.value = value;
+		this.enterListener = enterListener === undefined ? function(value) {} : enterListener;
+		this.exitListener = exitListener === undefined ? function(value) {} : exitListener;
+	}
 
-  init() {
-    this.enterListener(this.value);
-  }
+	init() {
+		this.enterListener(this.value);
+	}
 
-  setValue(newValue) {
-    if(newValue !== this.value) this.forceSetValue(newValue);
-  }
+	setValue(newValue) {
+		if(newValue !== this.value) this.forceSetValue(newValue);
+	}
 
-  forceSetValue(newValue) {
-    this.exitListener(this.value);
-    this.value = newValue;
-    this.enterListener(this.value);
-  }
+	forceSetValue(newValue) {
+		this.exitListener(this.value);
+		this.value = newValue;
+		this.enterListener(this.value);
+	}
 };

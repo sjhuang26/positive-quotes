@@ -1,0 +1,8 @@
+{
+  "name": "positive-quotes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sjhuang26/positive-quotes.git",
+  "author": "sjhuang26 <sjhuang26@gmail.com>",
+  "license": "MIT"
+}
